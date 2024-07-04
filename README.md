@@ -1,28 +1,17 @@
 # Assistino
-## OpenAI Assistant Service
 
-This Node.js module provides a wrapper for the OpenAI Assistants API, allowing easy integration of AI-powered conversational capabilities into your applications. It supports multi-user conversations with context retention and includes features for efficient management of API usage and costs.
-
-## Features
-
-- Easy-to-use interface for interacting with OpenAI Assistants
-- Multi-user support with separate conversation threads
-- Automatic management of conversation context
-- Cost optimization through inactive thread cleanup and message limiting
-- Customizable settings for timeout and message retention
+A TypeScript wrapper for the OpenAI Assistants API with multi-user support and cost optimization.
 
 ## Installation
 
 ```bash
-npm install openai
+npm install assistino
 ```
 
 ## Usage
 
-Here's a basic example of how to use the Assistant class:
-
-```javascript
-const Assistant = require('./main');
+```typescript
+import Assistant from 'assistino';
 
 const apiKey = 'YOUR_API_KEY_HERE';
 const assistantId = 'YOUR_ASSISTANT_ID_HERE';
@@ -39,7 +28,7 @@ async function chatExample() {
     console.log("Assistant's response:", response);
 
     // Cleanup inactive threads (call this periodically)
-    //await assist.cleanupInactiveThreads();
+   // await assist.cleanupInactiveThreads();
   } catch (error) {
     console.error("An error occurred:", error);
   }
@@ -47,7 +36,6 @@ async function chatExample() {
 
 chatExample();
 ```
-
 ## Configuration
 
 When creating an instance of the Assistant class, you can provide the following options:

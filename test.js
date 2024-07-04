@@ -1,4 +1,4 @@
-const Assistant = require('./main');
+const Assistant = require('assistino');
 
 async function main() {
   const apiKey = '';
@@ -10,7 +10,7 @@ async function main() {
 
   try {
     const user1Id = 'user2';
-    let response = await assist.chat("طرطت من عمل كيف تساعدني", user1Id);
+    let response = await assist.chat("manzakina za", user1Id);
     console.log("res for user2:", response);
 
     //await assist.cleanupInactiveThreads();
